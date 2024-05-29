@@ -9,20 +9,21 @@ var _controllersUser = require("../controllers/controllers.user.js");
 var _oauth = require("../middlewares/oauth.js");
 var rutaUser = (0, _express.Router)();
 
-// Get sirve para mostrar usuarios
+// Ruta para mostrar un usuario por id
 rutaUser.get("/user/:id", _controllersUser.mostrarUsuario);
-// Get sirve para mostrar todos los usuarios
+
+// Ruta para mostrar todos los usuarios
 rutaUser.get("/user", _controllersUser.listarUsuario);
 
-// Post sirve para guardar o crear
+// Ruta para crear un usuario
 rutaUser.post("/user", _controllersUser.crearUsuario);
 
-// modificar
-rutaUser.put("/user", _oauth.verifyToken, _controllersUser.modificarUsuario);
+// Ruta para modificar un usuario
+rutaUser.put("/user", _controllersUser.modificarUsuario);
 
-// para borrar
-rutaUser["delete"]("/user", _oauth.verifyToken, _controllersUser.eliminarUsuario);
+// Ruta para eliminar un usuario
+rutaUser["delete"]("/user", _controllersUser.eliminarUsuario);
 
-// para loguearse
+// Ruta para loguearse
 rutaUser.post("/login", _controllersUser.logueoUsuario);
 var _default = exports["default"] = rutaUser;

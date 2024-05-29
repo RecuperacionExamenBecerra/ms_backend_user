@@ -12,19 +12,19 @@ import { verifyToken } from "../middlewares/oauth.js";
 const rutaUser = Router();
 
 // Ruta para mostrar un usuario por id
-rutaUser.get("/user/:id", mostrarUsuario);
+rutaUser.get("/user/:id", verifyToken, mostrarUsuario);
 
 // Ruta para mostrar todos los usuarios
-rutaUser.get("/user", listarUsuario);
+rutaUser.get("/user", verifyToken, listarUsuario);
 
 // Ruta para crear un usuario
 rutaUser.post("/user", crearUsuario);
 
 // Ruta para modificar un usuario
-rutaUser.put("/user", modificarUsuario);
+rutaUser.put("/user", verifyToken, modificarUsuario);
 
 // Ruta para eliminar un usuario
-rutaUser.delete("/user", eliminarUsuario);
+rutaUser.delete("/user", verifyToken, eliminarUsuario);
 
 // Ruta para loguearse
 rutaUser.post("/login", logueoUsuario);

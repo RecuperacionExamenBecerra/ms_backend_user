@@ -11,7 +11,7 @@ var _bcrypt = _interopRequireDefault(require("bcrypt"));
 var _browser = require("../message/browser.js");
 var _dbMysql = _interopRequireDefault(require("../config/db.mysql.js"));
 var _dotenv = require("dotenv");
-var _jsonwebtoken = _interopRequireDefault(require("jsonwebtoken"));
+// import jwt from "jsonwebtoken";
 (0, _dotenv.config)();
 var crearUsuario = exports.crearUsuario = /*#__PURE__*/function () {
   var _ref = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(req, res) {
@@ -156,7 +156,7 @@ var eliminarUsuario = exports.eliminarUsuario = /*#__PURE__*/function () {
           id = req.body.id;
           _context5.prev = 1;
           _context5.next = 4;
-          return _dbMysql["default"].query("CALL  sp_EliminarUsuario(".concat(id, ");"));
+          return _dbMysql["default"].query("CALL sp_EliminarUsuario(".concat(id, ");"));
         case 4:
           respueta = _context5.sent;
           if (respueta[0].affectedRows == 1) {
@@ -215,7 +215,7 @@ var logueoUsuario = exports.logueoUsuario = /*#__PURE__*/function () {
             "nombre": respuesta[0][0][0].NOMBRE
           };
           _context6.next = 17;
-          return _jsonwebtoken["default"].sign(payload, process.env.TOKEN_PRIVATEKEY, {
+          return jwt.sign(payload, process.env.TOKEN_PRIVATEKEY, {
             expiresIn: process.env.TOKEN_EXPIRES_IN
           });
         case 17:
