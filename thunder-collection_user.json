@@ -1,0 +1,113 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "user",
+    "collectionId": "0c0a3bf9-130d-467d-b4ba-35d553efae42",
+    "dateExported": "2024-05-29T14:23:34.791Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "14d60b43-97cb-4544-90b4-00778053340a",
+            "colId": "0c0a3bf9-130d-467d-b4ba-35d553efae42",
+            "containerId": "",
+            "name": "eliminarUsuario",
+            "url": "http://localhost:9000/api/user",
+            "method": "DELETE",
+            "sortNum": 10000,
+            "created": "2024-05-09T12:21:50.252Z",
+            "modified": "2024-05-29T13:31:20.387Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"2\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "f76bc666-d252-4f14-ac08-f7ca9de2264b",
+            "colId": "0c0a3bf9-130d-467d-b4ba-35d553efae42",
+            "containerId": "",
+            "name": "mostrarUsuario",
+            "url": "http://localhost:9000/api/user",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-05-09T12:23:06.743Z",
+            "modified": "2024-05-29T13:12:29.629Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"usuario\":\"1\",\n  \"clave\":\"1\"\n  \n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "aadbc5e7-0c27-4afd-a924-57a7e816f203",
+            "colId": "0c0a3bf9-130d-467d-b4ba-35d553efae42",
+            "containerId": "",
+            "name": "modificarUsuario",
+            "url": "http://localhost:9000/api/user",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-05-09T12:25:21.204Z",
+            "modified": "2024-05-29T14:22:07.627Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"usuario\":\"pepito\",\n  \"nombre\":\"pepito\",\n  \"clave\":\"3\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "0a8fcd80-400a-483d-a441-88177236c965",
+            "colId": "0c0a3bf9-130d-467d-b4ba-35d553efae42",
+            "containerId": "",
+            "name": "crearUsuario",
+            "url": "http://localhost:9000/api/user",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-05-09T12:26:27.183Z",
+            "modified": "2024-05-29T13:28:46.525Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoibGlzYSIsIm5vbWJyZSI6Imxpc2FuZHJvIiwiaWF0IjoxNzE1MjcxNjU0LCJleHAiOjE3MTUyNzQ2NTR9.XefVMUf8Jw5XK3XfDglZn5O_yC6Uly-s4fehRVOP-Yk"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"jose\",\n  \"usuario\": \"2\",\n  \"clave\": \"2\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "095d6807-c85a-4b34-8d06-d9d9d172eb37",
+            "colId": "0c0a3bf9-130d-467d-b4ba-35d553efae42",
+            "containerId": "",
+            "name": "listarUsuario",
+            "url": "http://localhost:9000/api/user/1",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-05-09T12:26:51.657Z",
+            "modified": "2024-05-29T14:22:44.547Z",
+            "headers": []
+        },
+        {
+            "_id": "ad09f394-9b49-4d2e-802e-d852a1f8b00d",
+            "colId": "0c0a3bf9-130d-467d-b4ba-35d553efae42",
+            "containerId": "",
+            "name": "loginUsuario",
+            "url": "http://localhost:9000/api",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-05-09T12:27:16.355Z",
+            "modified": "2024-05-29T14:13:19.184Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"jose\",\n  \"id\": \"2\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "yPnumMl-R4joe5xiPtN1_DcoeHXQ9b-B7HX0D5ty3tL_MVus-7U5iNMlZ23EQQ8n0Qp5vzKqtgkkFxbCnmzebw"
+}
