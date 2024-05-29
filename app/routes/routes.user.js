@@ -15,13 +15,13 @@ const rutaUser = Router();
 rutaUser.get("/user/:id", verifyToken, mostrarUsuario);
 
 // Ruta para mostrar todos los usuarios
-rutaUser.get("/user", verifyToken, listarUsuario);
+rutaUser.get("/user", listarUsuario);
 
 // Ruta para crear un usuario
 rutaUser.post("/user", crearUsuario);
 
 // Ruta para modificar un usuario
-rutaUser.put("/user", verifyToken, modificarUsuario);
+rutaUser.put("/user", modificarUsuario);
 
 // Ruta para eliminar un usuario
 rutaUser.delete("/user", verifyToken, eliminarUsuario);
